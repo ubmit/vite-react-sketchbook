@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import framerMotionLogo from './assets/framer-motion.svg'
 import viteLogo from '/vite.svg'
 import { motion } from 'framer-motion'
 
@@ -10,7 +11,7 @@ function App() {
     <div className="max-w-screen-lg flex min-h-svh flex-col items-center justify-center gap-8 bg-gray-800 text-white">
       <div className="flex">
         <a href="https://vitejs.dev" target="_blank">
-          <img
+          <motion.img
             src={viteLogo}
             className="hover:drop-shadow-vite h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
             alt="Vite logo"
@@ -39,9 +40,23 @@ function App() {
             alt="React logo"
           />
         </a>
+        <a href="https://www.framer.com/motion/" target="_blank">
+          <motion.img
+            animate={{ y: [8, -4, 2, 0] }}
+            transition={{
+              stiffness: 100,
+              repeat: Infinity,
+              repeatType: 'loop',
+              duration: 1.5,
+            }}
+            src={framerMotionLogo}
+            className="hover:drop-shadow-framer-motion h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
+            alt="Framer Motion logo"
+          />
+        </a>
       </div>
-      <h1 className="text-5xl font-bold leading-tight text-white">
-        Vite + React
+      <h1 className="max-w-lg text-center text-5xl font-bold leading-tight text-white">
+        Vite, React & Framer Motion
       </h1>
       <div className="flex flex-col items-center gap-4">
         <button
