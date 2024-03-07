@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --animate-spin-slow: spin 20s linear infinite;
+  --color-react: #61dafbaa;
+  --color-vite: #646cffaa;
+  --drop-shadow-vite: 0 0 32px var(--color-vite);
 }

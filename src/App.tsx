@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { motion } from 'framer-motion'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,14 +12,30 @@ function App() {
         <a href="https://vitejs.dev" target="_blank">
           <img
             src={viteLogo}
-            className="h-36 p-6 transition-[filter] duration-300 will-change-[filter] hover:drop-shadow-[0_0_2em_#646cffaa]"
+            className="hover:drop-shadow-vite h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
             alt="Vite logo"
           />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img
+          <motion.img
+            initial={{
+              filter: 'drop-shadow(0 0 var(--color-black))',
+            }}
+            whileHover={{
+              filter: 'drop-shadow(0 0 32px var(--color-react))',
+            }}
+            animate={{ rotate: 360 }}
+            transition={{
+              filter: { duration: 0.3 },
+              rotate: {
+                repeat: Infinity,
+                repeatType: 'loop',
+                duration: 20,
+                ease: 'linear',
+              },
+            }}
             src={reactLogo}
-            className="animate-spin-slow h-36 p-6 transition-[filter] duration-300 will-change-[filter] hover:drop-shadow-[0_0_2em_#61dafbaa]"
+            className="h-36 p-6"
             alt="React logo"
           />
         </a>
