@@ -4,6 +4,8 @@
   --color-react: #61dafbaa;
   --color-vite: #646cffaa;
   --color-framer-motion: #bc4fd0aa;
+  --color-tailwind: #1ebab9aa;
   --drop-shadow-vite: 0 0 32px var(--color-vite);
   --drop-shadow-framer-motion: 0 0 32px var(--color-framer-motion);
+  --drop-shadow-tailwind: 0 0 32px var(--color-tailwind);
 }

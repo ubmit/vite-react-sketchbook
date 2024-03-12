@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import framerMotionLogo from './assets/framer-motion.svg'
+import tailwindLogo from './assets/tailwind-css.svg'
 import viteLogo from '/vite.svg'
 import { motion } from 'framer-motion'
 
@@ -9,15 +10,23 @@ function App() {
 
   return (
     <div className="max-w-screen-lg flex min-h-svh flex-col items-center justify-center gap-8 bg-gray-800 text-white">
-      <div className="flex">
-        <a href="https://vitejs.dev" target="_blank">
+      <div className="grid grid-cols-2 grid-rows-2 sm:flex ">
+        <a
+          href="https://vitejs.dev"
+          target="_blank"
+          className="flex justify-center"
+        >
           <motion.img
             src={viteLogo}
             className="hover:drop-shadow-vite h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
             alt="Vite logo"
           />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a
+          href="https://react.dev"
+          target="_blank"
+          className="flex justify-center"
+        >
           <motion.img
             initial={{
               filter: 'drop-shadow(0 0 var(--color-black))',
@@ -40,7 +49,11 @@ function App() {
             alt="React logo"
           />
         </a>
-        <a href="https://www.framer.com/motion/" target="_blank">
+        <a
+          href="https://www.framer.com/motion/"
+          target="_blank"
+          className="flex justify-center"
+        >
           <motion.img
             animate={{ y: [8, -4, 2, 0] }}
             transition={{
@@ -50,13 +63,31 @@ function App() {
               duration: 1.5,
             }}
             src={framerMotionLogo}
-            className="hover:drop-shadow-framer-motion h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
+            className="hover:drop-shadow-tailwind h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
             alt="Framer Motion logo"
           />
         </a>
+        <a
+          href="https://www.tailwindcss.com"
+          target="_blank"
+          className="flex justify-center"
+        >
+          <motion.img
+            animate={{ x: [4, -4] }}
+            transition={{
+              stiffness: 200,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 2,
+            }}
+            src={tailwindLogo}
+            className="hover:drop-shadow-framer-motion h-36 p-6 transition-[filter] duration-300 will-change-[filter]"
+            alt="Tailwind CSS logo"
+          />
+        </a>
       </div>
-      <h1 className="max-w-lg text-center text-5xl font-bold leading-tight text-white">
-        Vite, React & Framer Motion
+      <h1 className="max-w-sm text-center text-5xl font-bold leading-tight text-white sm:max-w-lg sm:text-5xl">
+        Vite, React, Framer Motion & Tailwind CSS
       </h1>
       <div className="flex flex-col items-center gap-4">
         <button
